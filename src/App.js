@@ -13,7 +13,7 @@ function App() {
         </div>
         <div>
           <Nome nome="Enrico" anni={39} />
-          <Nome nome="giulia" anni={29} />
+          <Nome nome="Giulia" anni={29} />
         </div>
       </header>
     </div>
