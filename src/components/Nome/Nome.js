@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Nome.scss";
 
 function Nome(props) {
   // Dichiara una nuova variable di stato, che chiameremo "contatore"
   const [medaglie, setMedaglie] = useState(0);
+
+  useEffect(() => {
+    console.log("Benvenuto " + props.nome);
+  }, [props.nome]);
+
+  useEffect(() => {
+    console.log("useEffect");
+    if (medaglie === 10) {
+      alert("Hai vinto la medaglia di bronzo!");
+    }
+  }, [medaglie]);
+
   function onClick() {
     setMedaglie(medaglie + 1);
   }
